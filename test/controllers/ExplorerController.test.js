@@ -24,4 +24,11 @@ describe("Unit Tests for the ExplorerController class", () => {
         const amountJavas = ExplorerController.getExplorersAmonutByMission("java");
         expect(amountJavas).toStrictEqual(expect.any(Number));
     });
+
+    test("Method getValidationWithNumber work", () => {
+        expect( ExplorerController.getValidationWithNumber(1) ).toBe(1);
+        expect( ExplorerController.getValidationWithNumber(3) ).toBe("FIZZ");
+        expect( ExplorerController.getValidationWithNumber(5) ).toBe("BUZZ");
+        expect( ExplorerController.getValidationWithNumber(15) ).toBe("FIZZBUZZ");
+    });
 });
